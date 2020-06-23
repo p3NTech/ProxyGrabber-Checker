@@ -6,6 +6,10 @@
 
 - Checking Proxies "NEW" If there is any issues open new issue
 
+- Pinging System
+
+<img src="https://j.top4top.io/p_1635s36z01.png"/>
+
 
 # Countries
 
