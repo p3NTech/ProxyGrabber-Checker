@@ -39,6 +39,12 @@ api.GrabProxies(county,type);
 
 api.CheckProxies(type);
 
+// If u want to get the number of loaded proxies and good proxies
+
+System.out.println("Loaded" + api.proxies.size());
+System.out.println("Good proxies: " + api.goodproxies.size());
+
+
 
 
 ```
