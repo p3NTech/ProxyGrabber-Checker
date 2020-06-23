@@ -118,14 +118,18 @@ All Credits reserved for SW3RD
                     System.setProperty("http.proxyHost",host);
                     System.setProperty("http.proxyPort", String.valueOf(port));
                     try {
+                        long starttime = System.currentTimeMillis();
                         URL url = new URL("http://www.google.com");
                         connection = (HttpURLConnection) url.openConnection();
                         connection.connect();
                         int status = connection.getResponseCode();
                         if(status > 299){
                             System.out.println(ANSI_RED + "[BAD] " + host + ":" + port);
+                            System.out.print(ANSI_GREEN);
                         }else{
-                            System.out.println("[GOOD] " + host + ":" + port);
+                            long endtime = System.currentTimeMillis();
+                            long thetime = endtime - starttime;
+                            System.out.println(ANSI_GREEN + "[GOOD] " + host + ":" + port + " [TIME] " + thetime + " ms");
                             goodproxies.put(host + ":",port);
 
                         }
@@ -159,6 +163,7 @@ All Credits reserved for SW3RD
                     System.setProperty("http.proxyHost",host);
                     System.setProperty("http.proxyPort", String.valueOf(port));
                     try {
+                        long starttime = System.currentTimeMillis();
                         URL url = new URL("http://www.google.com");
                         connection = (HttpURLConnection) url.openConnection();
                         connection.connect();
@@ -166,7 +171,9 @@ All Credits reserved for SW3RD
                         if(status > 299){
                             System.out.println(ANSI_RED + "[BAD] " + host + ":" + port);
                         }else{
-                            System.out.println("[GOOD] " + host + ":" + port);
+                            long endtime = System.currentTimeMillis();
+                            long thetime = endtime - starttime;
+                            System.out.println(ANSI_GREEN + "[GOOD] " + host + ":" + port + " [TIME] " + thetime + " ms");
                             goodproxies.put(host + ":",port);
 
                         }
@@ -200,6 +207,7 @@ All Credits reserved for SW3RD
                     System.setProperty("http.proxyHost",host);
                     System.setProperty("http.proxyPort", String.valueOf(port));
                     try {
+                        long starttime = System.currentTimeMillis();
                         URL url = new URL("http://www.google.com");
                         connection = (HttpURLConnection) url.openConnection();
                         connection.connect();
@@ -207,7 +215,9 @@ All Credits reserved for SW3RD
                         if(status > 299){
                             System.out.println(ANSI_RED + "[BAD] " + host + ":" + port);
                         }else{
-                            System.out.println("[GOOD] " + host + ":" + port);
+                            long endtime = System.currentTimeMillis();
+                            long thetime = endtime - starttime;
+                            System.out.println(ANSI_GREEN + "[GOOD] " + host + ":" + port + " [TIME] " + thetime + " ms");
                             goodproxies.put(host + ":",port);
 
                         }
@@ -241,6 +251,7 @@ All Credits reserved for SW3RD
                     System.setProperty("http.proxyHost",host);
                     System.setProperty("http.proxyPort", String.valueOf(port));
                     try {
+                        long starttime = System.currentTimeMillis();
                         URL url = new URL("http://www.google.com");
                         connection = (HttpURLConnection) url.openConnection();
                         connection.connect();
@@ -248,7 +259,9 @@ All Credits reserved for SW3RD
                         if(status > 299){
                             System.out.println(ANSI_RED + "[BAD] " + host + ":" + port);
                         }else{
-                            System.out.println("[GOOD] " + host + ":" + port);
+                            long endtime = System.currentTimeMillis();
+                            long thetime = endtime - starttime;
+                            System.out.println(ANSI_GREEN + "[GOOD] " + host + ":" + port + " [TIME] " + thetime + " ms");
                             goodproxies.put(host + ":",port);
 
                         }
