@@ -4,7 +4,8 @@
 
 - Grabbing Proxies
 
-- Checking Proxies ( NEW ) If there is any issues open new issue
+- Checking Proxies ( ![#f03c15] NEW `#f03c15`) If there is any issues open new issue
+
 
 # Countries
 
