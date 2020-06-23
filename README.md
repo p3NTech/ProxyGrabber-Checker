@@ -53,3 +53,5 @@ System.out.println("Good proxies: " + api.goodproxies.size());
 # Changelogs
 
 - Added Proxy Checking feature
+
+- Added Ping System
