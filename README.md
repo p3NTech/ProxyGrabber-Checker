@@ -6,6 +6,10 @@
 
 - Checking Proxies ( NEW ) If there is any issues open new issue
 
+# Countries
+
+- Enter the code of the country EX : US , IQ , EG
+
 # Grab Types
 
 - Http
@@ -13,8 +17,6 @@
 - Socks4
 
 - Socks5
-
-- ALL
 
 # Check Types
 
@@ -24,7 +26,7 @@
 
 - Socks5
 
-- ALL
+- ALL ( all.txt ) i mean
 
 # API Call
 
