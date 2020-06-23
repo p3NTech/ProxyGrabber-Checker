@@ -28,7 +28,7 @@
 
 # API Call
 
-```
+```java
 API api = new API();
 
 api.GrabProxies(county,type);
