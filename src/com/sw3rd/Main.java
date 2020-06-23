@@ -97,7 +97,7 @@ public class Main {
                 System.out.print("OK Good choose the type : ");
                 String checktype = sc.next();
                 if(!checktype.equals("http") && !checktype.equals("socks4") && !checktype.equals("socks5") && !checktype.equals("all")){
-                    System.out.print("The available proxies type is http,socks4,socks5");
+                    System.out.print("The available proxies type is http,socks4,socks5,all");
                     return;
                 }else{
                     System.out.println("Ok Checking the proxies ...");
