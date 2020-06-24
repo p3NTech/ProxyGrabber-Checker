@@ -59,3 +59,5 @@ System.out.println("Good proxies: " + api.goodproxies.size());
 - Added Proxy Checking feature
 
 - Added Ping System
+
+- Fixed Write only one good proxy
