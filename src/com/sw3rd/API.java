@@ -168,7 +168,7 @@ All Credits reserved for SW3RD
                         connection = (HttpURLConnection) url.openConnection();
                         connection.connect();
                         int status = connection.getResponseCode();
-                        if(status > 299){
+                        if(status >= 502){
                             System.out.println(ANSI_RED + "[BAD] " + host + ":" + port);
                         }else{
                             long endtime = System.currentTimeMillis();
@@ -212,7 +212,7 @@ All Credits reserved for SW3RD
                         connection = (HttpURLConnection) url.openConnection();
                         connection.connect();
                         int status = connection.getResponseCode();
-                        if(status > 299){
+                        if(status >= 502){
                             System.out.println(ANSI_RED + "[BAD] " + host + ":" + port);
                         }else{
                             long endtime = System.currentTimeMillis();
@@ -256,7 +256,7 @@ All Credits reserved for SW3RD
                         connection = (HttpURLConnection) url.openConnection();
                         connection.connect();
                         int status = connection.getResponseCode();
-                        if(status > 299){
+                        if(status >= 502){
                             System.out.println(ANSI_RED + "[BAD] " + host + ":" + port);
                         }else{
                             long endtime = System.currentTimeMillis();
