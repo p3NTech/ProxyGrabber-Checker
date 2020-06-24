@@ -40,6 +40,7 @@ public class Main {
     public static final String ANSI_WHITE = "\u001B[37m";
     static Scanner sc = new Scanner(System.in);
     static API api = new API();
+    static StringBuilder builder = new StringBuilder();
     public static void main(String[] args) {
         // write your code here
         try {
@@ -97,17 +98,19 @@ public class Main {
                 System.out.print("OK Good choose the type : ");
                 String checktype = sc.next();
                 if(!checktype.equals("http") && !checktype.equals("socks4") && !checktype.equals("socks5") && !checktype.equals("all")){
-                    System.out.print("The available proxies type is http,socks4,socks5,all");
+                    System.out.print("The available proxies type is http,socks4,socks5");
                     return;
                 }else{
                     System.out.println("Ok Checking the proxies ...");
                     api.CheckProxies(checktype);
-                    for(Map.Entry<String,Integer> proxygo : api.goodproxies.entrySet()){
-                        String host = proxygo.getKey();
-                        int port = proxygo.getValue();
-                        api.WriteFile(host + port + "\n","good");
-                    }
-                    System.out.println(ANSI_GREEN + "Good Proxies :" + api.goodproxies.size() + " Saved in good.txt");
+                for(Map.Entry<String, Integer> proxiess : api.goodproxies.entrySet()){
+                    String host = proxiess.getKey();
+                    int port = proxiess.getValue();
+                    builder.append(host + port).append("\n");
+                }
+
+                    api.WriteFile(builder.toString(),"good");
+                    System.out.println(ANSI_GREEN + "Good Proxies: " + api.goodproxies.size() + " Saved in good.txt");
 
                 }
 
