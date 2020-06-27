@@ -115,10 +115,11 @@ All Credits reserved for SW3RD
                     String host = proxies1.getKey();
                     int port = proxies1.getValue();
                     try {
-                        Proxy proxy = new Proxy(Proxy.Type.HTTP,new InetSocketAddress(host,port));
+                                   System.setProperty("http.proxyHost",host);
+                             System.setProperty("http.proxyPort",port);
                         long starttime = System.currentTimeMillis();
                         URL url = new URL("http://www.google.com");
-                        connection = (HttpURLConnection) url.openConnection(proxy);
+                        connection = (HttpURLConnection) url.openConnection();
                         connection.connect();
                         int status = connection.getResponseCode();
                         if(status >= 502){
@@ -158,12 +159,12 @@ All Credits reserved for SW3RD
                     String host = proxies1.getKey();
                     int port = proxies1.getValue();
 
-                        Proxy proxy = new Proxy(Proxy.Type.SOCKS,new InetSocketAddress(host,port));
-
+                             System.setProperty("socksProxyHost",host);
+                             System.setProperty("socksProxyPort",port);
                     try {
                         long starttime = System.currentTimeMillis();
                         URL url = new URL("http://www.google.com");
-                        connection = (HttpURLConnection) url.openConnection(proxy);
+                        connection = (HttpURLConnection) url.openConnection();
                         connection.connect();
                         int status = connection.getResponseCode();
                         if(status >= 502){
@@ -201,12 +202,13 @@ All Credits reserved for SW3RD
                 for(Map.Entry<String,Integer> proxies1 : proxies.entrySet()){
                     String host = proxies1.getKey();
                     int port = proxies1.getValue();
-                        Proxy proxy = new Proxy(Proxy.Type.SOCKS,new InetSocketAddress(host,port));
+                             System.setProperty("socksProxyHost",host);
+                             System.setProperty("socksProxyPort",port);
 
                     try {
                         long starttime = System.currentTimeMillis();
                         URL url = new URL("http://www.google.com");
-                        connection = (HttpURLConnection) url.openConnection(proxy);
+                        connection = (HttpURLConnection) url.openConnection();
                         connection.connect();
                         int status = connection.getResponseCode();
                         if(status >= 502){
